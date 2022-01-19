@@ -158,12 +158,15 @@ class TestMonkeyBlackbox:
     def get_log_dir_path():
         return os.path.abspath(LOG_DIR_PATH)
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_ssh_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Ssh, "SSH_exploiter_and_keys")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_hadoop_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Hadoop, "Hadoop_exploiter", 6 * 60)
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_mssql_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Mssql, "MSSQL_exploiter")
 
@@ -180,26 +183,33 @@ class TestMonkeyBlackbox:
             "PowerShell_Remoting_exploiter_credentials_reuse",
         )
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_smb_and_mimikatz_exploiters(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(
             island_client, SmbMimikatz, "SMB_exploiter_mimikatz"
         )
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_smb_pth(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, SmbPth, "SMB_PTH")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_drupal_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Drupal, "Drupal_exploiter")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_elastic_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Elastic, "Elastic_exploiter")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_struts_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Struts2, "Struts2_exploiter")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_weblogic_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, Weblogic, "Weblogic_exploiter")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_shellshock_exploiter(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, ShellShock, "Shellshock_exploiter")
 
@@ -218,19 +228,23 @@ class TestMonkeyBlackbox:
             island_client, Log4jLogstash, "Log4Shell_logstash_exploiter"
         )
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_tunneling(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(
             island_client, Tunneling, "Tunneling_exploiter", 15 * 60
         )
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_wmi_and_mimikatz_exploiters(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(
             island_client, WmiMimikatz, "WMI_exploiter,_mimikatz"
         )
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_wmi_pth(self, island_client):
         TestMonkeyBlackbox.run_exploitation_test(island_client, WmiPth, "WMI_PTH")
 
+    @pytest.mark.skip(reason="TEMPORARY")
     def test_zerologon_exploiter(self, island_client):
         test_name = "Zerologon_exploiter"
         expected_creds = [
